@@ -1,0 +1,5 @@
+videos/*/rendu/
+__pycache__/
+*.pyc
+.DS_Store
+apercu/

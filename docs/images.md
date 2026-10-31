@@ -1,0 +1,41 @@
+# Les visuels
+
+Chaque scène du script a une ligne `> visuel:` qui décrit l'image recherchée.
+`python3 outils/monter.py lecture videos/NNN-sujet` produit `rendu/visuels.md`, une liste à cocher.
+Dépose les fichiers dans `videos/NNN-sujet/images/` sous les noms `01.jpg`, `02.png`, `03.mp4`…
+
+Formats acceptés : **jpg, png, webp** (images) et **mp4, mov, webm, mkv** (extraits).
+Résolution conseillée : au moins 1280 px de large. Le montage recadre et anime tout seul.
+
+## Option A : images et extraits d'animés que tu fournis
+
+C'est ton choix pour la chaîne. Deux remarques pour que ça tienne dans la durée :
+- **Ta voix et ton propos doivent porter la vidéo.** Les images illustrent un commentaire original. C'est aussi ce que YouTube regarde pour accepter une chaîne dans le Programme Partenaire (règle du « contenu réutilisé »).
+- **Des plans courts et variés** plutôt que de longues scènes d'un même animé. Le montage fait déjà ça : un plan par phrase, recadré, étalonné et animé.
+- Sur une œuvre protégée, une revendication Content ID reste possible : les revenus de la vidéo peuvent alors aller aux ayants droit. Garde une trace de la provenance de tes extraits.
+
+## Option B : images générées gratuitement (100 % à toi, sans risque de droits)
+
+Des outils gratuits à utiliser depuis ton navigateur :
+- **Gemini** (gemini.google.com) : génération d'images gratuite avec un compte Google.
+- **Bing Image Creator / Microsoft Designer** : gratuit avec un compte Microsoft.
+- **ChatGPT** (version gratuite) : quelques images par jour.
+
+Modèle de prompt pour garder un style cohérent sur toute la chaîne :
+
+```
+Anime style illustration, cinematic, dramatic lighting, dark moody colors with warm golden highlights,
+16:9, highly detailed, emotional atmosphere, no text.
+Scene: <colle ici la ligne « visuel » du script>
+```
+
+Pour un Short, remplace `16:9` par `9:16`. Le montage accepte les deux formats.
+
+## Option C : génération automatique par Claude
+
+Possible gratuitement avec **Pollinations** (sans clé ni compte). Il suffit d'autoriser le domaine
+`image.pollinations.ai` dans les réglages réseau de l'environnement Claude. Claude générera alors
+toutes les images de la liste lui-même.
+
+## Mélanger les options
+On peut tout à fait mélanger : extraits d'animés pour les moments forts (`impact`), images générées pour le reste.
