@@ -30,6 +30,7 @@ pip install -r requirements.txt          # une seule fois (ffmpeg doit être ins
 
 python3 outils/monter.py nouvelle 002-mon-sujet          # crée le dossier d'une vidéo
 python3 outils/monter.py lecture videos/002-mon-sujet    # texte à lire + liste des visuels
+python3 outils/images.py videos/002-mon-sujet            # génère les images manquantes (gratuit)
 python3 outils/monter.py tout    videos/002-mon-sujet    # vidéo longue + Shorts
 ```
 
@@ -52,7 +53,7 @@ Résultats dans `videos/NNN-sujet/rendu/` :
 
 ```
 docs/        guides : format du script, enregistrement, images, idées de sujets
-outils/      monter.py (le moteur de montage)
+outils/      monter.py (le moteur de montage), images.py (génération d'images)
 videos/      un dossier par vidéo (script.md, audio/, images/, rendu/)
 musique/     musiques libres de droits (YouTube Audio Library, etc.)
 sfx/         bruitages (générés automatiquement si vide)

@@ -31,11 +31,19 @@ Scene: <colle ici la ligne « visuel » du script>
 
 Pour un Short, remplace `16:9` par `9:16`. Le montage accepte les deux formats.
 
-## Option C : génération automatique par Claude
+## Option C : génération automatique par Claude (activée)
 
-Possible gratuitement avec **Pollinations** (sans clé ni compte). Il suffit d'autoriser le domaine
-`image.pollinations.ai` dans les réglages réseau de l'environnement Claude. Claude générera alors
-toutes les images de la liste lui-même.
+```bash
+python3 outils/images.py videos/NNN-sujet                      # génère toutes les images manquantes
+python3 outils/images.py videos/NNN-sujet --scenes 4,12 --refaire   # refait des images ratées
+```
+- Les descriptions en anglais sont dans `prompts.json` (le modèle comprend mieux l'anglais). Le personnage récurrent y est décrit de la même façon partout : *a young man with short messy black hair and a dark hoodie*.
+- En gratuit : 1 image toutes les 45 s (environ 50 min pour une vidéo), en 1024 px, le filigrane est recadré.
+- Une clé gratuite Pollinations (enter.pollinations.ai), stockée dans la variable `POLLINATIONS_KEY`, retire ces limites.
+
+## Option D : extraits de films libres (Sintel, etc.)
+Voir [CREDITS.md](../CREDITS.md). Un extrait `NN.mp4` passe avant l'image `NN.jpg` de la même scène.
+S'il est plus court que la phrase, sa dernière image reste figée jusqu'à la fin. Pense à mettre la ligne de crédit dans la description.
 
 ## Mélanger les options
 On peut tout à fait mélanger : extraits d'animés pour les moments forts (`impact`), images générées pour le reste.

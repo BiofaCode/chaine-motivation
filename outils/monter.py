@@ -134,7 +134,7 @@ def trouver_media(dossier: Path, sc: Scene) -> Path | None:
     if sc.image:
         p = imgs / sc.image
         return p if p.exists() else None
-    for ext in EXT_IMAGES + EXT_VIDEOS:
+    for ext in EXT_VIDEOS + EXT_IMAGES:  # un extrait vidéo passe avant une image
         for nom in (f"{sc.n:02d}{ext}", f"{sc.n}{ext}", f"{sc.n:03d}{ext}"):
             if (imgs / nom).exists():
                 return imgs / nom
@@ -311,8 +311,8 @@ def rendre_scene(args: tuple) -> Path:
 
     if media and media.suffix.lower() in EXT_VIDEOS:
         vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"fps={FPS},{ETALONNAGE}")
-        run(["ffmpeg", "-y", "-stream_loop", "-1", "-ss", str(sc.debut_clip), "-i", str(media),
+              f"fps={FPS},tpad=stop_mode=clone:stop_duration={d:.2f},{ETALONNAGE}")  # fige la fin si trop court
+        run(["ffmpeg", "-y", "-ss", str(sc.debut_clip), "-i", str(media),
              "-t", f"{n_img / FPS:.3f}", "-vf", vf, "-an", *enc, str(sortie)])
         return sortie
 
