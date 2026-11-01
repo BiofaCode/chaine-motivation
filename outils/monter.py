@@ -290,7 +290,7 @@ def couvrir(img: Image.Image, W: int, H: int, marge: float) -> Image.Image:
         x = (fond.width - Wm) // 2
         fond = fond.crop((x, 0, x + Wm, Hm)).filter(ImageFilter.GaussianBlur(28))
         fond = Image.eval(fond, lambda v: int(v * 0.45))
-        h = int(Wm / ratio_img * 1.25)
+        h = Wm  # image recadrée en carré : remplit mieux l'écran du téléphone
         avant = img.resize((int(h * ratio_img), h), Image.LANCZOS)
         x = (avant.width - Wm) // 2
         avant = avant.crop((max(0, x), 0, max(0, x) + Wm, h))
@@ -597,8 +597,8 @@ def cmd_shorts(dossier: Path, prep=None) -> None:
         decal = [Scene(**{**sc.__dict__, "t0": sc.t0 - debut, "t1": min(sc.t1, fin) - debut,
                           "mots": [(m, a - debut, b - debut) for m, a, b in sc.mots]}) for sc in sel]
         decal[0].t0 = 0.0
-        if fin - debut > 59:
-            info(f"⚠ Short {k} dure {fin - debut:.0f}s (> 59s) : réduis la plage de scènes")
+        if fin - debut > 180:
+            info(f"⚠ Short {k} dure {fin - debut:.0f}s : YouTube limite les Shorts à 3 min (idéal : moins de 60 s)")
         muette = rendre_plans(dossier, decal, "short", rendu / f"_travail_short{k}")
         ass = rendu / f"sous_titres_short{k}.ass"
         ecrire_sous_titres(decal, "short", ass)
