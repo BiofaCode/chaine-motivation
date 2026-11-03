@@ -3,7 +3,7 @@
 ✅ = fait · 🎬 = en cours · rien = à faire
 
 ## Discipline et habitudes
-- ✅ (Short motivation) Pourquoi tu abandonnes toujours au bout de 3 jours (et comment arrêter)
+- 🎬 (Shorts motivation) Pourquoi tu abandonnes toujours au bout de 3 jours (et comment arrêter)
 - La discipline bat la motivation : arrête d'attendre d'avoir envie
 - Ce que les gens disciplinés font avant 8 h
 - Comment tenir une habitude 30 jours (sans volonté)

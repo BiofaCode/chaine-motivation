@@ -1,7 +1,7 @@
-# 🔥 Chaîne motivation (nom à trouver)
+# 🔥 Je construis tout en même temps (nom de chaîne à trouver)
 
 Chaîne YouTube en français, sans visage : je documente ma vie (job, école, agence, projets, sport) avec discipline et méthodes concrètes. Stratégie : [docs/strategie.md](docs/strategie.md).
-Format : **vidéos de 5 à 12 min**, plus **2 ou 3 Shorts** tirés de chaque vidéo, avec une ambiance animé/manga.
+Format : **1 vidéo longue par semaine** (journal de discipline, tes propres plans) + **2 ou 3 Shorts** (motivation style animé + extraits).
 Rythme : **1 vidéo par semaine.**
 
 ## Qui fait quoi
