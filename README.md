@@ -1,6 +1,6 @@
 # 🔥 Chaîne motivation (nom à trouver)
 
-Chaîne YouTube en français : motivation, discipline, astuces de vie.
+Chaîne YouTube en français, sans visage : je documente ma vie (job, école, agence, projets, sport) avec discipline et méthodes concrètes. Stratégie : [docs/strategie.md](docs/strategie.md).
 Format : **vidéos de 5 à 12 min**, plus **2 ou 3 Shorts** tirés de chaque vidéo, avec une ambiance animé/manga.
 Rythme : **1 vidéo par semaine.**
 
